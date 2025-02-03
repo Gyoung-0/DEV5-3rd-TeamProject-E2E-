@@ -2,6 +2,7 @@ from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.models import Variable
 from datetime import datetime, timedelta
+from airflow.operators.dagrun_operator import TriggerDagRunOperator
 import requests
 import json
 import boto3
@@ -125,5 +126,12 @@ upload_task = PythonOperator(
     dag=dag
 )
 
+trigger_redshift_dag = TriggerDagRunOperator(
+    task_id="trigger_s3_to_redshift",
+    trigger_dag_id="s3_to_snowflake_kopis",  # 위에서 만든 DAG ID
+    dag=dag
+)
+
+
 # DAG 실행 순서 정의
-fetch_task >> upload_task
+fetch_task >> upload_task >> trigger_redshift_dag
