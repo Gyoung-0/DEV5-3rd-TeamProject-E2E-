@@ -34,8 +34,8 @@ def fetch_and_upload_kopis_data(**context):
     # 현재 날짜 가져오기
     now = datetime.today()
 
-    # 2023년 1월부터 현재 연월까지 반복 실행
-    for year in range(2023, now.year + 1):
+    # 2018년 1월부터 현재 연월까지 반복 실행
+    for year in range(2018, now.year + 1):
         for month in range(1, 13):
             # 현재 연월보다 미래면 종료
             if year == now.year and month > now.month:
