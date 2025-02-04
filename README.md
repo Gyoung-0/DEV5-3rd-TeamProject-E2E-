@@ -9,6 +9,7 @@
 ## 🏗️ **Snowflake 테이블 스키마**
 - 공연 통계 테이블을 생성하여 공연 건수, 판매된 티켓 수, 취소된 티켓 수, 티켓 판매액 등의 정보를 저장합니다.
 - 원본 JSON 데이터를 저장하는 테이블을 따로 두어 데이터 정합성을 유지합니다.
+```sql
 CREATE TABLE gyoung.kopis_performance_raw (
     prfcnt INT,
     ntssnmrs INT,
@@ -19,6 +20,7 @@ CREATE TABLE gyoung.kopis_performance_raw (
     prfdt DATE, 
     prfprocnt INT
 );
+```
 ---
 
 ## ☁️ **S3 스토리지 연동 설정**
