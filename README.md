@@ -44,7 +44,8 @@ CREATE TABLE gyoung.kopis_performance_raw (
 - 필요에 따라 테이블 구조를 수정하여 추가적인 데이터를 저장할 수 있습니다.
 
 ## 대시보드
-![Uploading image.png…]()
+<img width="549" alt="image" src="https://github.com/user-attachments/assets/5ed0dc89-13a3-4800-8cf8-49d3aaa30830" />
+
 
 
 ---
